@@ -48,3 +48,13 @@ bin-int/
 *.vcxproj
 *.filters
 *.sln
+
+## Latex
+*.aux
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.gz
+*.toc
