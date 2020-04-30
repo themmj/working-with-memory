@@ -58,3 +58,5 @@ bin-int/
 *.snm
 *.gz
 *.toc
+*.bbl
+*.blg
