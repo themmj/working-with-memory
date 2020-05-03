@@ -37,6 +37,7 @@
 		\item[extern] Indicates that an identifier is defined elsewhere
 		\item[static] Preserves variable value after its scope ends (inside executable like globals)
 		\item[register] Tells the compiler to store the variable in a CPU register
+		\item[auto] Defines a local variable to have a local life time (automatically applied, rarely used)
 	\end{description}
 }
 
@@ -90,3 +91,57 @@
 	\end{description}
 }
 
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Spicy Stuff}
+	
+	\begin{description}
+		\item[enum] [tag] \key{\{}name [=value], \key{\}};\\
+		defines a set of constants of type \key{int}\\
+		value of constant name can be set explicitly or is previous constant's value +1 (first default 0)\\
+		tag can be used to declare variables of enum type
+		\item[sizeof] expr\\
+		returns size in bytes of evaluated expr\\
+		(type) can be used to get size of type
+		\item[goto] please don't
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Spicy Stuff}
+	
+	\begin{description}
+		\item[struct] [structname] \key{\{} { type varnames; } \key{\}} [structvars];\\
+		groups variables into a single record\\
+		structname is type name of structure\\
+		structvars are data definitions\\
+		both are optional but one must appear\\
+		elements of the record are defined with their type and names\\
+		elements are accessed with .
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Spicy Stuff}
+	
+	\begin{description}
+		\item[union] [unionname] \key{\{} { type varnames; } \key{\}} [unionvars];\\
+		groups variables which share the same storage space\\
+		similar to a struct except the variables share the same space\\
+		enough space to accommodate for the largest type will be allocated\\
+		writing to one element overwrites the others
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Spicy Stuff}
+	
+	\begin{description}
+		\item[typedef] definition identifier\\
+		creates a new type\\
+		assigns the symbol name identifier to the data type definition
+	\end{description}
+}
