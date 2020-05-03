@@ -1,0 +1,147 @@
+\section{Keywords}
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Types}
+	
+	\begin{description}
+		\item[void] Empty data type
+		\item[int] Integer with one machine-type word in length (usually 4 bytes, at least 2)
+		\item[char]  Character with smallest addressable unit of machine in length (usually 1 byte)
+		\item[float] Single precision floating point (usually)
+		\item[double] Double precision floating point (usually)
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Type Modifiers}
+	
+	\begin{description}
+		\item[short] int: At least 2 bytes length
+		\item[long] int: At least 4 bytes length\\
+		double: Usually 16 bytes length
+		\item[signed] int: Range at least [-32767, +32767]\\
+		char: Range at least [-127, +127]
+		\item[unsigned] int: Range at least [0, 65535]\\
+		char: Range at least [0, 255]
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Type Qualifiers}
+	
+	\begin{description}
+		\item[const] Variable value or pointer parameter is unmodifiable
+		\item[volatile] Indicates that a variable can be changed unpredictably (e.g. interrupts)
+		\item[extern] Indicates that an identifier is defined elsewhere
+		\item[static] Preserves variable value after its scope ends (inside executable like globals)
+		\item[register] Tells the compiler to store the variable in a CPU register
+		\item[auto] Defines a local variable to have a local life time (automatically applied, rarely used)
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Flow Control}
+	
+	\begin{description}
+		\item[for] ([expr1]; [expr2]; [expr3]) stmt\\
+		expr1 is evaluated before the first iteration\\
+		stmt is executed until expr2 evaluates to 0\\
+		expr3 is evaluated after every loop
+		\item[while] (expr) stmt\\
+		stmt is executed until expr evaluates to 0
+		\item[do] stmt \key{while} (expr)\\
+		stmt is executed until expr evaluates to 0\\
+		expr is evaluated after each execution
+		\item[if] (expr) stmt [else altstmt]\\
+		stmt is executed when expr evaluates to non-0\\
+		otherwise altstmt is executed
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Flow Control}
+	
+	\begin{description}
+		\item[switch] (expr) stmt\\
+		evaluating expr must return int value
+		stmt is usually a block of code with arbitrary amount of:\\
+		\key{case} constexpr: stmt \\
+		constexpr must have unique int value\\
+		stmt is executed when evaluated expr equals evaluated constexpr\\
+		finally one optional:\\
+		\key{default}: defstmt\\
+		defstmt is executed when no other branch was taken
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Flow Control}
+	
+	\begin{description}
+		\item[continue] causes control to pass to the end of the innermost enclosing \key{while}, \key{do}, \key{for}, \key{switch}
+		\item[break] causes control to pass to the statement following the innermost enclosing \key{while}, \key{do}, \key{for}, \key{switch}
+		\item[return] [expr]\\
+		exits immediately from the currently executing function to the calling routine\\
+		optionally returns value of evaluated expr
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Spicy Stuff}
+	
+	\begin{description}
+		\item[enum] [tag] \key{\{}name [=value], \key{\}};\\
+		defines a set of constants of type \key{int}\\
+		value of constant name can be set explicitly or is previous constant's value +1 (first default 0)\\
+		tag can be used to declare variables of enum type
+		\item[sizeof] expr\\
+		returns size in bytes of evaluated expr\\
+		(type) can be used to get size of type
+		\item[goto] please don't
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Spicy Stuff}
+	
+	\begin{description}
+		\item[struct] [structname] \key{\{} { type varnames; } \key{\}} [structvars];\\
+		groups variables into a single record\\
+		structname is type name of structure\\
+		structvars are data definitions\\
+		both are optional but one must appear\\
+		elements of the record are defined with their type and names\\
+		elements are accessed with .
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Spicy Stuff}
+	
+	\begin{description}
+		\item[union] [unionname] \key{\{} { type varnames; } \key{\}} [unionvars];\\
+		groups variables which share the same storage space\\
+		similar to a struct except the variables share the same space\\
+		enough space to accommodate for the largest type will be allocated\\
+		writing to one element overwrites the others
+	\end{description}
+}
+
+\frame{
+	\frametitle{Keywords}
+	\framesubtitle{Spicy Stuff}
+	
+	\begin{description}
+		\item[typedef] definition identifier\\
+		creates a new type\\
+		assigns the symbol name identifier to the data type definition
+	\end{description}
+}
