@@ -4,7 +4,8 @@ This repository provides almost everything needed to follow the ePortfolio on po
 
 ## 1. Prerequisites
 
-To build the demo executable `make` and `gcc` is required. Both are for example included in the `build-essential` package. If you are on Windows feel free to use a WSL or an SUSE image you may have installed. In terms of IDEs the sky is the limit.
+To build the demo executable `make` and `gcc` is required. Both are for example included in the `build-essential` package. If you are on Windows feel free to use a WSL or an SUSE image you may have installed. In terms of IDEs the sky is the limit.  
+The repository can be cloned or downloaded as a zip, according to personal preference.
 
 ## 2. Build demo executable
 If the [prerequisites](#1-prerequisites) are met navigate to the demo directory. The command  
