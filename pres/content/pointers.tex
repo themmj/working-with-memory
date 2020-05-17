@@ -2,14 +2,21 @@
 \frame{
 	\frametitle{Pointers}
 	
-	\begin{itemize}
-		\item declaration: type * name
-		\item type is the data type being pointed to
-		\item getting address of variable with \&
-		\item dereferencing pointer with *
-	\end{itemize}
-For example:\\
-int i = 10;\\
-int *p = \&i;\\
-*p = 15;
+	\begin{columns}[T]
+	\begin{column}{.6\textwidth}
+		\begin{itemize}
+			\item declaration: type * name
+			\item type is the data type being pointed to
+			\item getting address of variable with \&
+			\item dereferencing pointer with *
+		\end{itemize}
+	\end{column}%
+	\hfill%
+	\begin{column}{.36\textwidth}
+		For example:\\
+		int i = 10;\\
+		int *p = \&i;\\
+		*p = 15;
+	\end{column}%
+	\end{columns}
 }
